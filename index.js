@@ -28,7 +28,6 @@ $(document).ready(function() {
         $('#subscribeMsg').prepend(`<tr><td> ${$('#topic-subscribe').val()} </td> <td> ${$time.toDateString()+ " " + $time.toLocaleTimeString() }</td></tr> `)
         client.subscribe($('#topic-subscribe').val(), function(err) {
             if (!err) {
-
                 onMsg();
             }
         });
